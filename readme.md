@@ -68,7 +68,8 @@
   * <img width="1728" alt="Screenshot 2023-10-05 at 7 55 23 PM" src="https://github.com/HimanshubhusanRath/distributed-tracing-using-opentelemetry-jaeger/assets/40859584/b1008e51-4d01-40f1-85ae-73fcee6388f4">
   * <img width="1728" alt="Screenshot 2023-10-05 at 8 00 08 PM" src="https://github.com/HimanshubhusanRath/distributed-tracing-using-opentelemetry-jaeger/assets/40859584/68465afa-a213-448e-8403-2376897c9353">
 
-
+#### Reference:
+* https://refactorfirst.com/distributed-tracing-with-opentelemetry-jaeger-in-spring-boot
   
   
 
