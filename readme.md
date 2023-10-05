@@ -5,7 +5,9 @@
 * Jaeger:
   * Jaeger is an open-source, end-to-end distributed tracing system that is used to monitor and troubleshoot the performance of distributed systems and microservices-based applications.
 
-<TODO: Jaeger Architecture>
+#### Jaeger Architecture:
+<img width="713" alt="Screenshot 2023-10-05 at 8 01 26 PM" src="https://github.com/HimanshubhusanRath/distributed-tracing-using-opentelemetry-jaeger/assets/40859584/e92a0cf5-7f66-4572-ad34-e00ece6aac1b">
+
 
 ## 2. Setup:
 *  Dependency:
@@ -52,7 +54,11 @@
   * Open Jaeger UI at `http://localhost:16686/`
   * Select the `Service-1` from the `Services` list and then the individual call traces can be viewed.
   * When we click on a trace, it expends to highlight the spans which gives us the detail picture of the service interactions.
-  <TODO: Jaeger Result>
-  <TODO: Jaeger restul details>
+  <img width="1728" alt="Screenshot 2023-10-05 at 7 55 06 PM" src="https://github.com/HimanshubhusanRath/distributed-tracing-using-opentelemetry-jaeger/assets/40859584/80f6719e-fbde-4387-b92b-b8af35185794">
+  <img width="1728" alt="Screenshot 2023-10-05 at 7 55 23 PM" src="https://github.com/HimanshubhusanRath/distributed-tracing-using-opentelemetry-jaeger/assets/40859584/b1008e51-4d01-40f1-85ae-73fcee6388f4">
+  <img width="1728" alt="Screenshot 2023-10-05 at 8 00 08 PM" src="https://github.com/HimanshubhusanRath/distributed-tracing-using-opentelemetry-jaeger/assets/40859584/68465afa-a213-448e-8403-2376897c9353">
+
+
+  
   
 
