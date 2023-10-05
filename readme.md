@@ -1,21 +1,21 @@
 # Distributed Tracing with OpenTelemetry and Jaeger
 ## 1. Concepts:
-* OpenTelemetry:
+* **OpenTelemetry:**
   * OpenTelemetry (OTel) is an open-source framework for collecting and analyzing observability data, like traces and metrics, from distributed systems. It provides APIs and libraries for developers to instrument their applications, gain insights into system performance, and integrate with various observability tools.
   * Note: Check https://opentelemetry.io/docs/concepts/signals/traces/ to understand the core concepts of telemetry.
  
-#### OpenTelemetry Architecture:
-<img width="760" alt="Screenshot 2023-10-05 at 9 41 36 PM" src="https://github.com/HimanshubhusanRath/distributed-tracing-using-opentelemetry-jaeger/assets/40859584/95ee235d-37a7-48c8-817f-06db748a6071">
+  * #### OpenTelemetry Architecture:
+  * <img width="760" alt="Screenshot 2023-10-05 at 9 41 36 PM" src="https://github.com/HimanshubhusanRath/distributed-tracing-using-opentelemetry-jaeger/assets/40859584/95ee235d-37a7-48c8-817f-06db748a6071">
 
 
-* Jaeger:
+* **Jaeger:**
   * Jaeger is an open-source, end-to-end distributed tracing system that is used to monitor and troubleshoot the performance of distributed systems and microservices-based applications.
   * Data persistence in Jaeger:
     * By default Jaeger uses an in-memory database to store the trace data however, the preferred data store is `ElasticSearch`.
     * Use environment variable `SPAN_STORAGE_TYPE=elasticsearch` to set the data source.
 
-#### Jaeger Architecture:
-<img width="713" alt="Screenshot 2023-10-05 at 8 01 26 PM" src="https://github.com/HimanshubhusanRath/distributed-tracing-using-opentelemetry-jaeger/assets/40859584/e92a0cf5-7f66-4572-ad34-e00ece6aac1b">
+  * #### Jaeger Architecture:
+  * <img width="713" alt="Screenshot 2023-10-05 at 8 01 26 PM" src="https://github.com/HimanshubhusanRath/distributed-tracing-using-opentelemetry-jaeger/assets/40859584/e92a0cf5-7f66-4572-ad34-e00ece6aac1b">
 
 
 ## 2. Setup:
