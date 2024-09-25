@@ -69,6 +69,17 @@
   ```
   * Now try to access the below endpoint in service-1:
     * http://localhost:8081/service/path1
+* Customizations:
+  * Sending the trace-id in the response header so that the client is aware of the trace-id and can use it for tracing.
+    ```
+    String traceId = MDC.get("traceId"); // Get the trace ID
+    HttpHeaders headers = new HttpHeaders();
+    headers.put("X-TRACE-ID", Collections.singletonList(traceId));
+    ```
+  * Setting the 'user-id' as a tag in tracing data so that in the Jaeger UI, we can search by this tag.
+    ```
+    tracer.currentSpan().tag("user-id","himanshubhusan.rath");
+    ```
 * Check the tracing:
   * Open Jaeger UI at http://localhost:16686/
   * Select the `Service-1` from the `Services` list and then the individual call traces can be viewed.
