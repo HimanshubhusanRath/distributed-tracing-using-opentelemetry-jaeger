@@ -1,6 +1,7 @@
 package com.hr.opentelemetry.controller;
 
 import io.micrometer.tracing.Tracer;
+import jakarta.servlet.http.HttpServletRequest;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.slf4j.MDC;
@@ -15,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.Collections;
+import java.util.Enumeration;
 
 @RestController
 @RequestMapping("/service")
@@ -42,9 +44,20 @@ public class Controller {
     }
 
     @GetMapping("/path2")
-    public ResponseEntity path2() {
+    public ResponseEntity path2(final HttpServletRequest request) {
+        printHeaders(request);
         tracer.currentSpan().tag("user-id","himanshubhusan.rath");
         LOG.info("Incoming request at {} at /path2", applicationName);
         return ResponseEntity.ok("response from /path2");
+    }
+
+    private void printHeaders(final HttpServletRequest request) {
+        Enumeration<String> headerNames = request.getHeaderNames();
+        System.out.println("Header Type " + headerNames.getClass());
+        String headerName = null;
+        while(headerNames.hasMoreElements()){
+            headerName = headerNames.nextElement();
+            System.out.println(headerName+" : "+request.getHeader(headerName));
+        }
     }
 }
